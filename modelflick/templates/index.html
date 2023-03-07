@@ -4,5 +4,9 @@ Home
 {% endblock %}
 
 {% block content %}
-<h1>Home</h1>
+{% load static %}
+    <body>
+        <h1>Welcome to my home page</h1>
+        <img src="{% static 'images/image.jpg' %}" alt="My Image">
+     </body>
 {% endblock %}
