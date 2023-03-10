@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block title %}
 Results
 {% endblock %}
@@ -8,4 +9,5 @@ Results
 <p>Name: {{ name }}</p>
 <p>Area: {{ area }}</p>
 <p>Occupancy: {{ building }}</p>
+<a href="{% url 'generate-pdf' %}">Download PDF</a>
 {% endblock %}
