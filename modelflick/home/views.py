@@ -112,3 +112,20 @@ def generate_pdf(request):
     pdf.showPage()
     pdf.save()
     return response
+
+from django.shortcuts import render, redirect
+from .forms import serviceform
+from .models import services
+
+def my_view(request):
+    if request.method == 'POST':
+        form = serviceform(request.POST)
+        if form.is_valid():
+            # Save the form data to the database
+            form.save()
+            return render(request, 'result.html')
+    form = serviceform()
+    dict_form={
+        'form': form
+    }
+    return render(request, 'service.html',dict_form)
