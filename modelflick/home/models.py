@@ -13,4 +13,8 @@ class services(models.Model):
         ('storage', 'Storage')
     ]
     Your_dream_building = models.CharField(max_length=20, choices=type_choices)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.Name}{self.area_of_site}{self.Your_dream_building}{self.created}"
     

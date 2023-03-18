@@ -6,10 +6,17 @@ Results
 
 {% block content %}
 <h1>Results</h1>
-<p>Name: {{ name }}</p>
-<p>Area: {{ area }}</p>
-<p>Occupancy: {{ building }}</p>
+{% for services in service %}
+    {{ services.Name }}
+    {{ services.area_of_site }}
+    {{ services.Your_dream_building }}
+{% endfor %}
 <a href="{% url 'generate-pdf' %}">Download PDF</a>
 {% endblock %}
 
 
+
+
+
+
+<a href="{% url 'generate-pdf' %}">Download PDF</a>
