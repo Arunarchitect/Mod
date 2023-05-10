@@ -5,8 +5,45 @@ Home
 
 {% block content %}
 {% load static %}
-    <body>
-        <h1>Welcome to the future of architecture, To taste our services click on services</h1>
-        <img src="{% static 'images/image.jpg' %}" alt="My Image">
-     </body>
+    <body style="font-size: 100%;">
+        <style>
+            h1 {
+              text-align: center;
+              margin-top: 100px;
+              margin-right: 80px;
+            }
+        </style>
+        <h1>I want to</h1>
+        <!-- <img src="{% static 'images/image.jpg' %}" alt="My Image">       -->
+        <!-- code to insert an image -->
+        <style>
+            .btn-primary {
+              background-color: black;
+              color: rgb(255, 255, 255);
+              border-radius: 15px;
+              font-size: 20px;
+              padding: 15px 25px;
+            }
+          
+            .btn-secondary {
+              background-color: black;
+              color: rgb(255, 255, 255);
+              margin-left: 20px;
+              border-radius: 15px;
+              font-size: 20px;
+              padding: 15px 25px;
+            }
+          </style>
+          
+          <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center" style="margin-top: 30px;">
+                <button class="btn btn-primary btn-lg" onclick="window.location.href='{% url 'service' %}'">Build</button>
+                <button class="btn btn-secondary btn-lg" onclick="window.location.href='{% url 'service' %}'">Help to Build</button>
+              </div>
+            </div>
+          </div>
+          
+          
+    </body>
 {% endblock %}
