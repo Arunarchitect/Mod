@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <body style="font-size: 100%;">
+        <style>
+            h1 {
+              text-align: left;
+              margin-top: 100px;
+              margin-left:0px;
+              font-size: 60px;
+            }
+            h2 {
+              text-align: left;
+              margin-top: 0px;
+              margin-left: 0px;
+              font-size: 50px;
+            }
+            h3 {
+              text-align: left;
+              margin-top: 20px;
+              margin-left: 0px;
+              font-size: 45px;
+              font-family: 'Playfair Display', serif;
+              font-weight: bold;
+              font-style: italic;
+            }
+
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h1>Modelflick</h1>
+              <h2>Realise your Spaces</h2>
+              <h3>"Try it for yourself in creating your dream building."</h3>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'images/computer.png' %}" alt="My Image" style="width: 90%; height: 80%; margin-top: 100px;">
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          .btn-primary {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            border-radius: 30px;
+            font-size: 28px;
+            padding: 30px 80px;
+            margin-left: 0px;
+          }
+        </style>
+        
+        <div class="container">
+          <div class="row justify-content">
+            <div class="col-md-6 text-left" style="margin-top: 0px;">
+              <button class="btn btn-primary btn-lg" onclick="window.location.href='{% url 'pointer' %}'">Try it Now</button>
+            </div>
+          </div>
+        </div>
+        
+    </body>
+{% endblock %}

@@ -6,8 +6,11 @@ from .forms import serviceform
 
 
 # Create your views here.
-def index(request):
-    return render(request,'index.html')
+def pointer(request):
+    return render(request,'pointer.html')
+
+def home(request):
+    return render(request,'home.html')
 
 def about(request):
     return render(request,'about.html')
